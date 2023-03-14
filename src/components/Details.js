@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { useParams } from 'react-router-dom';
 import { connect } from 'react-redux';
+import AddListing from './AddListing';
 
 function Details({ listings }) {
   const { index } = useParams();

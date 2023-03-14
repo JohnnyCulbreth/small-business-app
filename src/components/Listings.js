@@ -22,7 +22,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 
 const mapStateToProps = (state) => {
   return {
-    listings: initialState.listings,
+    listings: state.listings.listings,
   };
 };
 
