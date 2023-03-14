@@ -1,3 +1,11 @@
+This app is a simple web application for creating and viewing listings of businesses with their descriptions, addresses, hours of operation, and geographic coordinates. Users can add, edit, and delete listings, and view details of each listing. The app uses React and Redux for state management, and Material UI for styling. The backend is simulated using local storage.
+
+----------------------------------------------------------------------------------------
+<img width="1438" alt="Screen Shot 2023-03-13 at 8 44 44 PM" src="https://user-images.githubusercontent.com/102640510/224871022-f7469773-7c35-46c5-917c-5809c00d4053.png">
+
+<img width="1435" alt="Screen Shot 2023-03-13 at 8 44 28 PM" src="https://user-images.githubusercontent.com/102640510/224871030-16f0e389-2fd1-4663-8a09-f12c0fe0cdee.png">
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
