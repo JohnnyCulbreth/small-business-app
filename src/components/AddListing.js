@@ -1,6 +1,13 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { addListing } from '../redux/actions';
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  TextField,
+  Button,
+} from '@mui/material';
 
 const mapDispatchToProps = {
   addListing: addListing,
@@ -34,72 +41,79 @@ function AddListing({ addListing }) {
   };
 
   return (
-    <div>
-      <h1>Add Listing</h1>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Business Name:
-          <input
-            type='text'
+    <Card sx={{ minWidth: 475, minHeight: 475, backgroundColor: '#f0eded' }}>
+      <CardHeader title='Add Listing' />
+      <CardContent>
+        <form onSubmit={handleSubmit}>
+          <TextField
+            fullWidth
+            label='Business Name'
             value={businessName}
             onChange={(e) => setBusinessName(e.target.value)}
             required
+            sx={{ marginBottom: 0.5 }}
           />
-        </label>
-        <br />
-        <label>
-          Description:
-          <input
-            type='text'
+          <br />
+          <TextField
+            fullWidth
+            label='Description'
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             required
+            sx={{ marginTop: 0.5, marginBottom: 0.5 }}
           />
-        </label>
-        <br />
-        <label>
-          Address:
-          <input
-            type='text'
+          <br />
+          <TextField
+            fullWidth
+            label='Address'
             value={address}
             onChange={(e) => setAddress(e.target.value)}
             required
+            sx={{ marginTop: 0.5, marginBottom: 0.5 }}
           />
-        </label>
-        <br />
-        <label>
-          Hours:
-          <input
-            type='text'
+          <br />
+          <TextField
+            fullWidth
+            label='Hours'
             value={hours}
             onChange={(e) => setHours(e.target.value)}
             required
           />
-        </label>
-        <br />
-        <label>
-          Latitude:
-          <input
-            type='text'
+          <br />
+          <TextField
+            fullWidth
+            label='Latitude'
             value={lat}
             onChange={(e) => setLat(e.target.value)}
             required
+            sx={{ marginTop: 0.5, marginBottom: 0.5 }}
           />
-        </label>
-        <br />
-        <label>
-          Longitude:
-          <input
-            type='text'
+          <br />
+          <TextField
+            fullWidth
+            label='Longitude'
             value={lng}
             onChange={(e) => setLng(e.target.value)}
             required
+            sx={{ marginTop: 0.5 }}
           />
-        </label>
-        <br />
-        <button type='submit'>Add Listing</button>
-      </form>
-    </div>
+          <br />
+          <Button
+            type='submit'
+            variant='contained'
+            sx={{
+              backgroundColor: '#4d6e94',
+              marginTop: 1,
+              '&:hover': {
+                background: '#283544',
+              },
+            }}
+          >
+            Add Listing
+          </Button>
+        </form>
+      </CardContent>
+    </Card>
   );
 }
 
